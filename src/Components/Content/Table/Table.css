@@ -34,7 +34,7 @@ nav[aria-label='pagination'] > button[aria-current='page'] {
     width: 40px;
     height: 40px;
     border-radius: 100rem;
-    background-color: #89eada;
+    background-color: #e74b82;
     color: #fff;
 }
 nav[aria-label='pagination'] > button {
