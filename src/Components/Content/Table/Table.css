@@ -1,0 +1,56 @@
+.pagination {
+    margin-left: 200px;
+}
+
+.status-new {
+    background-color: #f3f2f2;
+    color: rgb(93 188 255);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-in-progress {
+    background-color: #f8f6d8;
+    color: rgb(159, 161, 43);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.status-completed {
+    background-color: #ccf7de;
+    color: rgb(66, 139, 91);
+    padding: 2px 8px;
+    border-radius: 25px;
+}
+
+.dt-layout-row:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+nav[aria-label='pagination'] > button[aria-current='page'] {
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    background-color: #89eada;
+    color: #fff;
+}
+nav[aria-label='pagination'] > button {
+    margin: 0 5px;
+    color: #9c9c9c;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    transition: all 0.4s linear;
+    border:none;
+}
+
+nav[aria-label='pagination'] > button:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 100rem;
+    background-color: #e03572;
+    color: #fff;
+}
