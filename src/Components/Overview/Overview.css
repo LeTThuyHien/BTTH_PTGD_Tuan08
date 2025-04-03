@@ -1,0 +1,63 @@
+.overview {
+    grid-area: 2 / 2 / 3 / 6;
+    padding: 20px;
+}
+
+.overview-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.overview-header svg {
+    color: rgb(213, 24, 122);
+    font-size: 16px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.item {
+    width: calc(100% / 3);
+    height: 150px;
+    border-radius: 8px;
+    line-height: 2;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.note-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.note-item span {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+
+}
+
+.item>div>svg {
+    font-size: 15px;
+}
+
+.item>div:last-child {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 8px;
+
+}
+
