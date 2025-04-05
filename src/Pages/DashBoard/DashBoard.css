@@ -1,33 +1,28 @@
-.content {
-    grid-area: 3 / 2 / 5 / 6;
-    padding: 20px;
-}
-
-.title-content {
+.title-darhboard {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
 }
 
-.title-content>div:first-child {
+.title-darhboard>div:first-child {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.title-content svg {
+.title-darhboard svg {
     color: rgb(213, 24, 122);
     font-size: 16px;
 }
 
-.title-content>div:last-child {
+.title-darhboard>div:last-child {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.title-content>div:last-child button {
+.title-darhboard>div:last-child button {
     display: flex;
     justify-content: center;
     align-items: center;

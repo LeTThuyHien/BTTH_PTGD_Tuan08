@@ -6,11 +6,12 @@ import DT from 'datatables.net-dt';
 import 'datatables.net-select-dt';
 
 
-import './Content.css';
+import './DashBoard.css';
 import Table from './Table/Table';
 
 
-function Content() {
+
+function DashBoard() {
     const [table, setTable] = useState([]);
     useEffect(() => {
         fetch("https://67c7c544c19eb8753e7aac5f.mockapi.io/api/gc")
@@ -25,8 +26,8 @@ function Content() {
     }, []);
 
     return (
-        <div className="content">
-            <div className="title-content">
+        <div className="darhboard">
+            <div className="title-darhboard">
                 <div>
                     <FaFileLines />
                     <h3>Detailed report</h3>
@@ -41,4 +42,4 @@ function Content() {
     );
 }
 
-export default Content;
+export default DashBoard;
