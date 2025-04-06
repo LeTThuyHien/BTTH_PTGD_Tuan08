@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import { FaFileLines } from 'react-icons/fa6';
 import { FaFileExport, FaFileImport } from 'react-icons/fa';
 import DataTable from 'datatables.net-react';
-import DT from 'datatables.net-dt';
 import 'datatables.net-select-dt';
-
 
 import './DashBoard.css';
 import Table from './Table/Table';
+
 
 
 
@@ -33,11 +32,11 @@ function DashBoard() {
                     <h3>Detailed report</h3>
                 </div>
                 <div>
-                    <button><FaFileImport /> &nbsp;Import</button>
+                    <button><FaFileImport/> &nbsp;Import</button>
                     <button><FaFileExport />&nbsp;Export</button>
                 </div>
             </div>
-            <Table data={table} />
+            <Table data={table} />           
         </div>
     );
 }
