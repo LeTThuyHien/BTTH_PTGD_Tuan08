@@ -32,11 +32,11 @@ function DashBoard() {
                     <h3>Detailed report</h3>
                 </div>
                 <div>
-                    <button><FaFileImport/> &nbsp;Import</button>
+                    <button><FaFileImport /> &nbsp;Import</button>
                     <button><FaFileExport />&nbsp;Export</button>
                 </div>
             </div>
-            <Table data={table} />           
+            <Table data={table} setData={setTable} />
         </div>
     );
 }

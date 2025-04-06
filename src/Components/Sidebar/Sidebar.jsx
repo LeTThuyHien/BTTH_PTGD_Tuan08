@@ -1,4 +1,4 @@
-import img from "../../assets/img/logo.png";
+import images from "../../assets/images/logo.png";
 import "./Sidebar.css";
 import Menu from "./Menu/Menu";
 import MenuItem from "./Menu/MenuItem";
@@ -8,7 +8,7 @@ function Sidebar() {
     return (
         <aside className="sidebar">
             <div className="img-logo">
-                <img src={img} alt="logo" />
+                <img src={images} alt="logo" />
             </div>
             <Menu>
                 <MenuItem title= "Dashboard" to="/" icon = {<FaLayerGroup />} />

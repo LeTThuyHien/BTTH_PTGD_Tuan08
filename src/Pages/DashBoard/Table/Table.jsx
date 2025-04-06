@@ -5,10 +5,11 @@ import "datatables.net-select-dt"
 
 import "./Table.css";
 import EditForm from "../../../Components/EditForm/EditForm";
+import images from "../../../assets/images/noImg.png";
 
 DataTable.use(DT);
 
-function Table({ data }) {
+function Table({ data, setData }) {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedRow, setSelectedRow] = useState(null);
 
@@ -29,7 +30,7 @@ function Table({ data }) {
             render: (data, type, row) =>
                 `<div style="display: flex; align-items: center; justify-content: space-around;">
                     <img
-                        src="${row.img}"
+                        src="${row.img || images.noImg}"
                         alt="Avatar"
                         style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;"
                     />
@@ -83,7 +84,7 @@ function Table({ data }) {
         const rowData = data.filter((row) => {
             return Number(row.id) === rowId;
         });
-        setSelectedRow(rowData);
+        setSelectedRow(rowData[0]);
         setIsOpen(true);
         console.log(rowData);
 
@@ -112,7 +113,7 @@ function Table({ data }) {
                     },
                 }}
             />
-            <EditForm isOpen={isOpen} setIsOpen={setIsOpen} rowData={selectedRow} />
+            <EditForm isOpen={isOpen} setIsOpen={setIsOpen} rowData={selectedRow} setDataParent={setData} />
         </>
 
     );
