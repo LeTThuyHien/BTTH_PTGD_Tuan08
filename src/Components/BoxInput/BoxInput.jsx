@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 import { memo } from 'react';
 
+import "./BoxInput.css";
+
 const BoxInput = forwardRef(
     (
         {
@@ -19,23 +21,26 @@ const BoxInput = forwardRef(
         ref,
     ) => {
         return (
-            <div className={`box-input ${classBox ? classBox : ''}`}>
-                <div>{label}</div>
-                <div>
-                    <input
-                        ref={ref}
-                        className={`input ${error ? 'input-error' : ''}`}
-                        placeholder={placeholder}
-                        type={type}
-                        name={name}
-                        value={value}
-                        onChange={onChange}
-                        onFocus={onFocus}
-                    />
-                    {icon}
-                    {error && <p className="error">{error}</p>}
+            <div>
+                <div className={`box-input ${classBox ? classBox : ''}`}>
+                    <div>{label}</div>
+                    <div className='info-person'>
+                        <input
+                            ref={ref}
+                            className={`input ${error ? 'input-error' : ''}`}
+                            placeholder={placeholder}
+                            type={type}
+                            name={name}
+                            value={value}
+                            onChange={onChange}
+                            onFocus={onFocus}
+                        />
+                        {icon}
+                    </div>
                 </div>
+                {error && <p className="error">{error}</p>}
             </div>
+
         );
     },
 );

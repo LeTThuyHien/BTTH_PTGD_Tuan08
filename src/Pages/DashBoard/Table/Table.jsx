@@ -5,6 +5,7 @@ import "datatables.net-select-dt"
 
 import "./Table.css";
 import EditForm from "../../../Components/EditForm/EditForm";
+import AddUser from "../../../Components/AddUser/AddUser";
 import images from "../../../assets/images/noImg.png";
 
 DataTable.use(DT);
@@ -114,6 +115,8 @@ function Table({ data, setData }) {
                 }}
             />
             <EditForm isOpen={isOpen} setIsOpen={setIsOpen} rowData={selectedRow} setDataParent={setData} />
+            
+            
         </>
 
     );

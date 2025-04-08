@@ -85,7 +85,6 @@ function EditForm({ isOpen, setIsOpen, rowData, setDataParent }) {
                         <p className="title">AVATAR</p>
                         {editField === 'img' ? (
                             <input type="file"
-                                className="input-file"
                                 value={editData.img}
                                 onChange={(e) => handleChange(e, 'img')}
                             />
