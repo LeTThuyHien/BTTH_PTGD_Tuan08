@@ -29,11 +29,11 @@ function Table({ data, setData }) {
             title: 'CUSTOMER NAME',
             data: null,
             render: (data, type, row) =>
-                `<div style="display: flex; align-items: center; justify-content: space-around;">
+                `<div style="display: flex; align-items: center; padding-left: 30px">
                     <img
                         src="${row.img || images.noImg}"
                         alt="Avatar"
-                        style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px;"
+                        style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;"
                     />
                     <span>${row.name}</span>
                 </div>`,
@@ -108,15 +108,16 @@ function Table({ data, setData }) {
                     ordering: false,
                     lengthChange: false,
                     info: true,
-                    pageLength: 4,
+                    pageLength: 6,
                     language: {
                         info: '_TOTAL_ results',
                     },
                 }}
             />
             <EditForm isOpen={isOpen} setIsOpen={setIsOpen} rowData={selectedRow} setDataParent={setData} />
-            
-            
+            <AddUser isOpen={isOpen} setIsOpen={setIsOpen} />
+
+
         </>
 
     );

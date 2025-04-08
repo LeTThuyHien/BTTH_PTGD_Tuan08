@@ -1,8 +1,13 @@
 import './Footer.css';
+import imglogo from "../../assets/images/Visily-logo.svg"
 function Footer() {
     return (
 
-        <footer className="footer"></footer>
+        <footer className="footer">
+            <p>Made with</p>
+            <img className='f-logo' src={imglogo} alt="logo" />
+
+        </footer>
 
     );
 }

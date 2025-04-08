@@ -1,4 +1,13 @@
 .footer {
     grid-area: 5 / 1 / 6 / 6;
     border: 1px solid #ccc;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.f-logo {
+    width: 70px;
+    height: 50px;
 }

@@ -1,4 +1,53 @@
 .header {
     grid-area: 1 / 2 / 2 / 6;
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.title-page h1 {
+    color: rgb(213, 24, 122);
+}
+
+.item-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+
+
+.item-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#searchInput {
+    padding: 10px 30px;
+    border: none;
+    background-color: #f3f3f3;
+}
+
+
+.item-search svg {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #5a5858;
+
+}
+
+.img-admin img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+
 }

@@ -27,27 +27,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
-nav[aria-label='pagination'] > button[aria-current='page'] {
-    width: 40px;
-    height: 40px;
+nav[aria-label='pagination']>button[aria-current='page'] {
+    width: 30px;
+    height: 30px;
     border-radius: 100rem;
     background-color: #e74b82;
     color: #fff;
 }
-nav[aria-label='pagination'] > button {
+
+nav[aria-label='pagination']>button {
     margin: 0 5px;
     color: #9c9c9c;
     width: 40px;
     height: 40px;
     background-color: transparent;
     transition: all 0.4s linear;
-    border:none;
+    border: none;
 }
 
-nav[aria-label='pagination'] > button:hover {
+nav[aria-label='pagination']>button:hover {
     width: 40px;
     height: 40px;
     border-radius: 100rem;
