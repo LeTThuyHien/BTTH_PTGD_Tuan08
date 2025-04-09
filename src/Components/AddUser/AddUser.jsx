@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { FaBuilding, FaCalendar, FaCalendarWeek, FaDollarSign, FaFileSignature, FaHashtag, FaImage, FaSignHanging } from "react-icons/fa6";
 import { FaSignature } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 import BoxInput from "../BoxInput/BoxInput";
 import Modal from "../Modal/Modal";
@@ -82,17 +83,17 @@ function AddUser({ isOpen, setIsOpen, setDataParent }) {
 
     const validateInput = (name, value) => {
         const rule = validationRules[name];
-    
+
         if (!rule) return '';
-    
+
         if (rule.required && !value) {
             return rule.emptyMessage || 'Trường này là bắt buộc.';
         }
-    
+
         if (rule.regex && !rule.regex.test(value)) {
             return rule.errorMessage || 'Giá trị không hợp lệ.';
         }
-    
+
         if (value instanceof File) {
             if (rule.fileType && !rule.fileType.includes(value.type)) {
                 return 'Định dạng tệp không hợp lệ.';
@@ -101,20 +102,20 @@ function AddUser({ isOpen, setIsOpen, setDataParent }) {
                 return `Tệp quá lớn. Giới hạn là ${rule.maxSize / (1024 * 1024)}MB.`;
             }
         }
-    
+
         if (rule.validateDateRange) {
             const inputDate = new Date(value);
             const minDate = new Date('1900-01-01');
             const maxDate = new Date();
-    
+
             if (inputDate < minDate || inputDate > maxDate) {
                 return 'Ngày đặt hàng phải nằm trong khoảng từ 01/01/1900 đến hôm nay!';
             }
         }
-    
+
         return '';
     };
-    
+
 
     const handleRadioChange = (selectedStatus) => {
         setStatus(selectedStatus);
@@ -189,6 +190,8 @@ function AddUser({ isOpen, setIsOpen, setDataParent }) {
             setIsOpen(false);
 
             const data = await response.json();
+            toast.success("Thêm thành công");
+
 
             setDataParent((prevData) => [...prevData, data]);
 
